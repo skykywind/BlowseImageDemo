@@ -42,7 +42,7 @@ extension ModalAnimationDelegate {
     }
     
     // 自定义present动画
-    func customPresentAnimation(_ transitionContext: UIViewControllerContextTransitioning){
+    private func customPresentAnimation(_ transitionContext: UIViewControllerContextTransitioning){
         
         // 获取转场上下文中的 目标view 和 容器view，并将目标view添加到容器view上
         let destinationView = transitionContext.view(forKey: UITransitionContextViewKey.to)
@@ -92,7 +92,7 @@ extension ModalAnimationDelegate {
     }
     
     // 自定义dismiss动画
-    func customDismissAnimation(_ transitionContext: UIViewControllerContextTransitioning) {
+    private func customDismissAnimation(_ transitionContext: UIViewControllerContextTransitioning) {
         let fromView = transitionContext.view(forKey: .from)
         let contentView = transitionContext.containerView
         let fromVC = transitionContext.viewController(forKey: .from) as! BlowseBigImageViewController
